@@ -1,10 +1,17 @@
-.App {
-  text-align: center;
+body {
+  background: #000;
 }
-
+.App {
+  background: dimgrey;
+  text-align: center;
+  max-width: 1190px;
+  margin: 0 auto;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  display: block;
+  margin: 0  auto;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -35,4 +42,44 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+
+.Component1 {
+  background: red;
+  width: 100%;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+}
+.Component1 * {
+  margin-top: 10px;
+}
+
+
+.Component2 {
+  background: green;
+  display: inline-block;
+  width: 20%;
+  color: #fff;
+  margin-top: 30px;
+  font-size: 20px;
+  text-align: center;
+}
+.Component2 * {
+  margin-top: 10px;
+}
+
+.Component3 {
+  background: blueviolet;
+  display: inline-block;
+  width: 20%;
+  color: #fff;
+  margin-top: 30px;
+  font-size: 20px;
+  text-align: center;
+}
+.Component3 * {
+  margin-top: 10px;
 }
