@@ -1,0 +1,105 @@
+.dialogs_wrapper {
+    display: grid;
+    grid-template-columns: 3fr 9fr;
+}
+
+
+.dialog_users {
+    border-right: 1px solid #f1f2f2;
+    background: #fff;
+}
+.dialog_users .user_item {
+    background: #fff;
+    border-bottom: 1px solid #f1f2f2;
+    cursor: pointer;
+    display: flex;
+    padding: 10px;
+}
+.dialog_users .user_item.active {
+    background: pink !important;
+}
+.dialog_users .user_item:hover {
+    background: #ECF6FB;
+}
+.dialog_users .avatar_wrapper {
+    height: 50px;
+    width: 50px;
+}
+.dialog_users .avatar_wrapper img {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+.dialog_users .short_inf_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 14px;
+}
+
+
+.dialog_messages {
+    background: #fff;
+    padding: 0 10px 0 10px;
+}
+.dialog_messages .msg_item {
+    display: flex;
+    margin-top: 5px;
+}
+.dialog_messages .msg_item.myMsg {
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+}
+.dialog_messages .msg_item.contMsg {
+    justify-content: flex-start;
+}
+
+
+.dialog_messages .msg_item .msg_avtr_wrapper {
+    width: 32px;
+    height: 32px;
+}
+.dialog_messages .msg_item .msg_avtr_wrapper img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+
+.dialog_messages .msg_item .msg_text_wrapper {
+    padding: 10px;
+    background: #ECF6FB;
+    border-radius: 10px;
+    position: relative;
+    max-width: 45%;
+    margin-left: 8px;
+}
+.dialog_messages .msg_item .msg_text_wrapper:before {
+    border-bottom: 8px solid transparent;
+    border-right: 7px solid #ECF6FB;
+    border-top: 8px solid transparent;
+    content: "";
+    width: 5px;
+    position: absolute;
+    top: 7px;
+    left: -11px;
+}
+
+.dialog_messages .msg_item.myMsg .msg_text_wrapper {
+    margin-right: 8px;
+}
+.dialog_messages .msg_item.myMsg .msg_text_wrapper:before {
+    display: none;
+}
+.dialog_messages .msg_item.myMsg .msg_text_wrapper:after {
+    border-top: 8px solid transparent;
+    border-left: 7px solid #ECF6FB;
+    border-bottom: 8px solid transparent;
+    content: "";
+    width: 5px;
+    position: absolute;
+    top: 7px;
+    right: -11px;
+}
+
+
