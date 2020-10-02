@@ -10,7 +10,7 @@ const Dialog_user_item = (props) => {
     let userId = '/dialogs/' + props.userId;
 
     return (
-        <NavLink to={userId} className={cssCls.user_item}>
+        <NavLink to={userId} className={cssCls.user_item} activeClassName={cssCls.active}>
             <div className={cssCls.avatar_wrapper}>
                 <img src={userAvtrPath} alt=""/>
             </div>
