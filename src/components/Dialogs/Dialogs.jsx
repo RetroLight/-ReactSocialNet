@@ -27,8 +27,14 @@ const Dialogs = (props) => {
                 {user_dialogs_elems}
             </div>
 
-            <div className={cssCls.dialog_messages}>
-                {user_messages_elems}
+            <div className={cssCls.dialog_messages_wrapper}>
+                <div className={cssCls.dialog_messages}>
+                    {user_messages_elems}
+                </div>
+                <div className={cssCls.new_messages_block}>
+                    <textarea name="" id="" cols="auto" rows="1"></textarea>
+                    <button>Отправить</button>
+                </div>
             </div>
         </div>
     )

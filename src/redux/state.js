@@ -102,6 +102,101 @@ let state = {
                 msg_id: 8,
                 msg_avtr: 'https://sun9-1.userapi.com/impf/c847219/v847219442/d9a2c/NlO4bcfVAjU.jpg?size=400x0&quality=90&crop=0,503,1536,1536&sign=6c4caa97f8264d09497534df8803782e&ava=1',
                 msg_text: 'Проверка прошла хорошо'
+            },{
+                acc_owner: true,
+                msg_id: 5,
+                msg_avtr: 'https://sun9-1.userapi.com/impf/c847219/v847219442/d9a2c/NlO4bcfVAjU.jpg?size=400x0&quality=90&crop=0,503,1536,1536&sign=6c4caa97f8264d09497534df8803782e&ava=1',
+                msg_text: 'А у тебя, че, как дела?'
+            },
+            {
+                acc_owner: false,
+                msg_id: 6,
+                msg_avtr: 'https://sun9-63.userapi.com/impg/c857724/v857724792/13ff4b/gl5rLHn95Bo.jpg?size=400x0&quality=90&crop=0,0,2048,2048&sign=125c3314a41ad8579fae1380cf19b463&ava=1',
+                msg_text: 'Да пойдет'
+            },
+            {
+                acc_owner: true,
+                msg_id: 7,
+                msg_avtr: 'https://sun9-1.userapi.com/impf/c847219/v847219442/d9a2c/NlO4bcfVAjU.jpg?size=400x0&quality=90&crop=0,503,1536,1536&sign=6c4caa97f8264d09497534df8803782e&ava=1',
+                msg_text: 'Ну и хорошо'
+            },
+            {
+                acc_owner: true,
+                msg_id: 8,
+                msg_avtr: 'https://sun9-1.userapi.com/impf/c847219/v847219442/d9a2c/NlO4bcfVAjU.jpg?size=400x0&quality=90&crop=0,503,1536,1536&sign=6c4caa97f8264d09497534df8803782e&ava=1',
+                msg_text: 'Проверка прошла хорошо'
+            },
+            {
+                acc_owner: true,
+                msg_id: 5,
+                msg_avtr: 'https://sun9-1.userapi.com/impf/c847219/v847219442/d9a2c/NlO4bcfVAjU.jpg?size=400x0&quality=90&crop=0,503,1536,1536&sign=6c4caa97f8264d09497534df8803782e&ava=1',
+                msg_text: 'А у тебя, че, как дела?'
+            },
+            {
+                acc_owner: false,
+                msg_id: 6,
+                msg_avtr: 'https://sun9-63.userapi.com/impg/c857724/v857724792/13ff4b/gl5rLHn95Bo.jpg?size=400x0&quality=90&crop=0,0,2048,2048&sign=125c3314a41ad8579fae1380cf19b463&ava=1',
+                msg_text: 'Да пойдет'
+            },
+            {
+                acc_owner: true,
+                msg_id: 7,
+                msg_avtr: 'https://sun9-1.userapi.com/impf/c847219/v847219442/d9a2c/NlO4bcfVAjU.jpg?size=400x0&quality=90&crop=0,503,1536,1536&sign=6c4caa97f8264d09497534df8803782e&ava=1',
+                msg_text: 'Ну и хорошо'
+            },
+            {
+                acc_owner: true,
+                msg_id: 8,
+                msg_avtr: 'https://sun9-1.userapi.com/impf/c847219/v847219442/d9a2c/NlO4bcfVAjU.jpg?size=400x0&quality=90&crop=0,503,1536,1536&sign=6c4caa97f8264d09497534df8803782e&ava=1',
+                msg_text: 'Проверка прошла хорошо'
+            },
+            {
+                acc_owner: true,
+                msg_id: 5,
+                msg_avtr: 'https://sun9-1.userapi.com/impf/c847219/v847219442/d9a2c/NlO4bcfVAjU.jpg?size=400x0&quality=90&crop=0,503,1536,1536&sign=6c4caa97f8264d09497534df8803782e&ava=1',
+                msg_text: 'А у тебя, че, как дела?'
+            },
+            {
+                acc_owner: false,
+                msg_id: 6,
+                msg_avtr: 'https://sun9-63.userapi.com/impg/c857724/v857724792/13ff4b/gl5rLHn95Bo.jpg?size=400x0&quality=90&crop=0,0,2048,2048&sign=125c3314a41ad8579fae1380cf19b463&ava=1',
+                msg_text: 'Да пойдет'
+            },
+            {
+                acc_owner: true,
+                msg_id: 7,
+                msg_avtr: 'https://sun9-1.userapi.com/impf/c847219/v847219442/d9a2c/NlO4bcfVAjU.jpg?size=400x0&quality=90&crop=0,503,1536,1536&sign=6c4caa97f8264d09497534df8803782e&ava=1',
+                msg_text: 'Ну и хорошо'
+            },
+            {
+                acc_owner: true,
+                msg_id: 8,
+                msg_avtr: 'https://sun9-1.userapi.com/impf/c847219/v847219442/d9a2c/NlO4bcfVAjU.jpg?size=400x0&quality=90&crop=0,503,1536,1536&sign=6c4caa97f8264d09497534df8803782e&ava=1',
+                msg_text: 'Проверка прошла хорошо'
+            },
+            {
+                acc_owner: true,
+                msg_id: 5,
+                msg_avtr: 'https://sun9-1.userapi.com/impf/c847219/v847219442/d9a2c/NlO4bcfVAjU.jpg?size=400x0&quality=90&crop=0,503,1536,1536&sign=6c4caa97f8264d09497534df8803782e&ava=1',
+                msg_text: 'А у тебя, че, как дела?'
+            },
+            {
+                acc_owner: false,
+                msg_id: 6,
+                msg_avtr: 'https://sun9-63.userapi.com/impg/c857724/v857724792/13ff4b/gl5rLHn95Bo.jpg?size=400x0&quality=90&crop=0,0,2048,2048&sign=125c3314a41ad8579fae1380cf19b463&ava=1',
+                msg_text: 'Да пойдет'
+            },
+            {
+                acc_owner: true,
+                msg_id: 7,
+                msg_avtr: 'https://sun9-1.userapi.com/impf/c847219/v847219442/d9a2c/NlO4bcfVAjU.jpg?size=400x0&quality=90&crop=0,503,1536,1536&sign=6c4caa97f8264d09497534df8803782e&ava=1',
+                msg_text: 'Ну и хорошо'
+            },
+            {
+                acc_owner: true,
+                msg_id: 8,
+                msg_avtr: 'https://sun9-1.userapi.com/impf/c847219/v847219442/d9a2c/NlO4bcfVAjU.jpg?size=400x0&quality=90&crop=0,503,1536,1536&sign=6c4caa97f8264d09497534df8803782e&ava=1',
+                msg_text: 'Проверка прошла хорошо'
             }
         ]
     }

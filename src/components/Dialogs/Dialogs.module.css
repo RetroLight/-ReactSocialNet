@@ -7,6 +7,7 @@
 .dialog_users {
     border-right: 1px solid #f1f2f2;
     background: #fff;
+    overflow-y: scroll;
 }
 .dialog_users .user_item {
     background: #fff;
@@ -37,10 +38,18 @@
     margin-left: 14px;
 }
 
-
-.dialog_messages {
+.dialog_messages_wrapper {
     background: #fff;
     padding: 0 10px 0 10px;
+    display: grid;
+    grid-gap: 10px;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.dialog_messages {
+    overflow-y: scroll;
+    padding-right: 14px;
 }
 .dialog_messages .msg_item {
     display: flex;
@@ -100,6 +109,15 @@
     position: absolute;
     top: 7px;
     right: -11px;
+}
+
+.new_messages_block {
+    display: grid;
+    grid-template-columns: 10fr 2fr;
+    grid-gap: 10px;
+    align-self: flex-end;
+    margin-bottom: 10px;
+    padding-right: 14px;
 }
 
 
