@@ -1,0 +1,15 @@
+.new_post_block {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    height: 100px;
+}
+.new_post_block textarea.post_textarea {
+    width: 100%;
+    height: inherit;
+    resize: none;
+}
+.new_post_block button.post_post_btn {
+    cursor: pointer;
+    height: 100%;
+}

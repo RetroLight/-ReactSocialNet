@@ -10,8 +10,9 @@ const MyPosts = (props) => {
     return (
     <div>
         My posts
-        <div>
-            New posts
+        <div className={cssCls.new_post_block}>
+            <textarea className={cssCls.post_textarea} name="" id="" cols="30" rows="10"></textarea>
+            <button className={cssCls.post_post_btn}>Отправить</button>
         </div>
         <div className={cssCls.posts}>
             {posts_elements}

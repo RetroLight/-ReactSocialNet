@@ -6,7 +6,7 @@ import Dialog_user_item from "./Dialog_user_item/Dialog_user_item";
 
 const Dialogs = (props) => {
 
-    const user_dialogs_elems = props.user_dialog_data_arr
+    const user_dialogs_elems = props.dialogs_page_state.user_dialog_data_arr
         .map(dialog => <Dialog_user_item
         userAvtrPath={dialog.user_avtr_path}
         userName={dialog.user_name}
@@ -14,7 +14,7 @@ const Dialogs = (props) => {
         userShortTxt={dialog.user_short_txt}
     />);
 
-    const user_messages_elems = props.user_msg_data_arr
+    const user_messages_elems = props.dialogs_page_state.user_msg_data_arr
         .map(message => <Msg_item
             avtr_path={message.msg_avtr}
             message_text={message.msg_text}
