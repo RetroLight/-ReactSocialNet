@@ -21,6 +21,15 @@ const Dialogs = (props) => {
             acc_owner={message.acc_owner}
         />);
 
+
+    const new_msg_elem = React.createRef();
+
+    const send_msg_btn = () => {
+        const msg_text = new_msg_elem.current.value;
+        alert(msg_text);
+    };
+
+
     return(
         <div className={cssCls.dialogs_wrapper}>
             <div className={cssCls.dialog_users}>
@@ -32,8 +41,8 @@ const Dialogs = (props) => {
                     {user_messages_elems}
                 </div>
                 <div className={cssCls.new_messages_block}>
-                    <textarea name="" id="" cols="auto" rows="1"></textarea>
-                    <button>Отправить</button>
+                    <textarea ref={new_msg_elem} name="" id="" cols="auto" rows="1"></textarea>
+                    <button onClick={send_msg_btn}>Отправить</button>
                 </div>
             </div>
         </div>

@@ -9,7 +9,7 @@ const Profile = (props) => {
     return (
         <div className={cssCls.Profile}>
             <Profile_info/>
-            <MyPosts posts_data_arr={props.profile_page_state.posts_data_arr}/>
+            <MyPosts posts_data_arr={props.profile_page_state.posts_data_arr} bll_add_post={props.bll_add_post}/>
         </div>
     )
 };
