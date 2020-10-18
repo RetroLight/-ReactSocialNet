@@ -22,7 +22,8 @@ let state = {
                 post_msg: 'Everything will be great',
                 post_like_counter: 55
             }
-        ]
+        ],
+        newPostTxt: 'Текст нового поста'
     },
     messagesPage: {
         user_dialog_data_arr: [
@@ -199,20 +200,35 @@ let state = {
     }
 };
 
-export const bll_add_post = (post_text) => {
 
-    const new_post_elem = {
-        post_id: Math.floor(Math.random() * 10000000),
-        post_avtr: 'https://sun9-1.userapi.com/impf/c847219/v847219442/d9a2c/NlO4bcfVAjU.jpg?size=400x0&quality=90&crop=0,503,1536,1536&sign=6c4caa97f8264d09497534df8803782e&ava=1',
-        post_msg: post_text,
-        post_like_counter: 0
-    };
-    state.profilePage.posts_data_arr.unshift(new_post_elem);
-    rerenderReactTree(state);
-    console.log(state.profilePage)
-
+export const clearField = () => {
+    state.profilePage.newPostTxt = '';
+    rerenderReactTree(state, bll_add_post, updatePostTxt, clearField);
 };
 
+
+export const updatePostTxt = (newTxt) => {
+    state.profilePage.newPostTxt = newTxt;
+    rerenderReactTree(state, bll_add_post, updatePostTxt, clearField);
+};
+
+
+export const bll_add_post = () => {
+    if(state.profilePage.newPostTxt) {
+        const new_post_elem = {
+            post_id: Math.floor(Math.random() * 10000000),
+            post_avtr: 'https://sun9-1.userapi.com/impf/c847219/v847219442/d9a2c/NlO4bcfVAjU.jpg?size=400x0&quality=90&crop=0,503,1536,1536&sign=6c4caa97f8264d09497534df8803782e&ava=1',
+            post_msg: state.profilePage.newPostTxt,
+            post_like_counter: 0
+        };
+        state.profilePage.posts_data_arr.unshift(new_post_elem);
+        rerenderReactTree(state, bll_add_post, updatePostTxt, clearField);
+        state.profilePage.newPostTxt = 'Текст нового поста';
+    }
+    else {
+        alert('Вы не ввели сообщение')
+    }
+};
 
 
 export default state;

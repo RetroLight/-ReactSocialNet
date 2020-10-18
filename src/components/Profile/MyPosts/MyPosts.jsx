@@ -10,20 +10,17 @@ const MyPosts = (props) => {
 
     const text_area_elem = React.createRef();
 
-    const e_add_post = () => {
-        const post_text = text_area_elem.current.value;
-        if(post_text) {
-            props.bll_add_post(post_text);
-            text_area_elem.current.value = null;
-        }
+    const onPostChange = () => {
+        props.updatePostTxt(text_area_elem.current.value)
     };
 
     return (
     <div>
         My posts
         <div className={cssCls.new_post_block}>
-            <textarea  ref={text_area_elem} className={cssCls.post_textarea} name="" id="" cols="30" rows="10"></textarea>
-            <button className={cssCls.post_post_btn} onClick={e_add_post}>Отправить</button>
+            <textarea ref={text_area_elem} className={cssCls.post_textarea} name="" id="" cols="30" rows="10" onClick={props.clearField} onChange={onPostChange} value={props.newPostTxt}/>
+
+            <button className={cssCls.post_post_btn} onClick={props.bll_add_post}>Отправить</button>
         </div>
         <div className={cssCls.posts}>
             {posts_elements}

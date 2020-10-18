@@ -1,8 +1,7 @@
 import ReactDOM from "react-dom";
 import App from "./App";
-import {bll_add_post} from "./redux/state";
 import React from "react";
 
-export const rerenderReactTree = (state) => {
-    ReactDOM.render(<App state={state} bll_add_post={bll_add_post}/>, document.getElementById('root'));
+export const rerenderReactTree = (state, bll_add_post, updatePostTxt, clearField) => {
+    ReactDOM.render(<App state={state} bll_add_post={bll_add_post} updatePostTxt={updatePostTxt} clearField={clearField}/>, document.getElementById('root'));
 };
