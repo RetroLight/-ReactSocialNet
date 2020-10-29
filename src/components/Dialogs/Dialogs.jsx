@@ -24,10 +24,17 @@ const Dialogs = (props) => {
 
     const new_msg_elem = React.createRef();
 
-    const send_msg_btn = () => {
-        const msg_text = new_msg_elem.current.value;
-        alert(msg_text);
+    const msgWriteTxt = () => {
+        let action = {
+            type: 'UPDATE-MSG-TXT',
+            newMsgTxt: new_msg_elem.current.value
+        };
+        props.dispatch(action);
     };
+
+    const addMsg = () => {
+        props.dispatch({type: 'BLL-ADD-MSG'})
+    }
 
 
     return(
@@ -41,12 +48,13 @@ const Dialogs = (props) => {
                     {user_messages_elems}
                 </div>
                 <div className={cssCls.new_messages_block}>
-                    <textarea ref={new_msg_elem} name="" id="" cols="auto" rows="1"></textarea>
-                    <button onClick={send_msg_btn}>Отправить</button>
+                    <textarea onChange={msgWriteTxt} ref={new_msg_elem} placeholder={'Текст сообщения'} value={props.dialogs_page_state.newMsgText} name="" id="" cols="auto" rows="1" />
+                    <button onClick={addMsg}>Отправить</button>
                 </div>
             </div>
         </div>
     )
 };
+
 
 export default Dialogs;
