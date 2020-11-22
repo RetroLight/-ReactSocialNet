@@ -2,6 +2,7 @@ import React from 'react';
 import cssCls from './Dialogs.module.css';
 import Msg_item from "./Msg_item/Msg_item";
 import Dialog_user_item from "./Dialog_user_item/Dialog_user_item";
+import {updateMsgActionCreator, addMsgActionCreator} from "../../redux/messagesPageReducer";
 
 
 const Dialogs = (props) => {
@@ -25,16 +26,13 @@ const Dialogs = (props) => {
     const new_msg_elem = React.createRef();
 
     const msgWriteTxt = () => {
-        let action = {
-            type: 'UPDATE-MSG-TXT',
-            newMsgTxt: new_msg_elem.current.value
-        };
-        props.dispatch(action);
+        let newMsgTxt = new_msg_elem.current.value;
+        props.dispatch(updateMsgActionCreator(newMsgTxt));
     };
 
     const addMsg = () => {
-        props.dispatch({type: 'BLL-ADD-MSG'})
-    }
+        props.dispatch(addMsgActionCreator())
+    };
 
 
     return(

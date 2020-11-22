@@ -1,3 +1,7 @@
+import profilePageReducer from "./profilePageReducer";
+import messagesPageReducer from "./messagesPageReducer";
+
+
 const store = {
     _state: {
         profilePage: {
@@ -206,46 +210,12 @@ const store = {
         return this._state;
     },
     dispatch(action) {
-        if (action.type === 'CLEAR-FIELD') {
-            this._state.profilePage.newPostTxt = '';
-            this._callSubscriber(this._state);
 
-        } else if (action.type === 'UPDATE-POST-TXT') {
-            this._state.profilePage.newPostTxt = action.newTxt;
-            this._callSubscriber(this._state);
+        this._state.profilePage = profilePageReducer(this._state.profilePage, action);
+        this._state.messagesPage = messagesPageReducer(this._state.messagesPage, action);
 
-        } else if (action.type === 'BLL-ADD-POST') {
-            if (this._state.profilePage.newPostTxt) {
-                const new_post_elem = {
-                    post_id: Math.floor(Math.random() * 10000000),
-                    post_avtr: 'https://sun9-1.userapi.com/impf/c847219/v847219442/d9a2c/NlO4bcfVAjU.jpg?size=400x0&quality=90&crop=0,503,1536,1536&sign=6c4caa97f8264d09497534df8803782e&ava=1',
-                    post_msg: this._state.profilePage.newPostTxt,
-                    post_like_counter: 0
-                };
-                this._state.profilePage.posts_data_arr.unshift(new_post_elem);
-                this._state.profilePage.newPostTxt = '';
-                this._callSubscriber(this._state);
-            } else {
-                alert('Вы не ввели сообщение')
-            }
-        } else if (action.type === 'UPDATE-MSG-TXT') {
-            this._state.messagesPage.newMsgText = action.newMsgTxt;
-            this._callSubscriber(this._state);
+        this._callSubscriber(this._state);
 
-        } else if (action.type === 'BLL-ADD-MSG') {
-            if (this._state.messagesPage.newMsgText) {
-                const newMsg = {
-                    acc_owner: true,
-                    msg_id: Math.floor(Math.random() * 10000000),
-                    msg_avtr: 'https://sun9-1.userapi.com/impf/c847219/v847219442/d9a2c/NlO4bcfVAjU.jpg?size=400x0&quality=90&crop=0,503,1536,1536&sign=6c4caa97f8264d09497534df8803782e&ava=1',
-                    msg_text: this._state.messagesPage.newMsgText
-                };
-                this._state.messagesPage.user_msg_data_arr.push(newMsg);
-                this._state.messagesPage.newMsgText = '';
-                this._callSubscriber(this._state);
-
-            }
-        }
     }
 };
 
