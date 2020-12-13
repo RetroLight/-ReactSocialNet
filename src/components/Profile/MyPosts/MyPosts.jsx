@@ -1,27 +1,23 @@
 import React from "react";
 import cssCls from "./MyPosts.module.css";
 import Post from "./Post/Post";
-import {addPostActionCreator, updatePostActionCreator} from "../../../redux/profilePageReducer";
-
 
 const MyPosts = (props) => {
 
-    const posts_elements = props.posts_data_arr
+    const posts_elements = props.postsDataArr
         .map(post => <Post post_id={post.post_id} post_avtr={post.post_avtr} message={post.post_msg}
                            likes={post.post_like_counter}/>);
-
 
 
     const text_area_elem = React.createRef();
 
     const onPostChange = () => {
         let text = text_area_elem.current.value;
-        props.dispatch(updatePostActionCreator(text));
-        console.log(window.store)
+        props.onPostChange(text);
     };
 
-    const addPost = () => {
-        props.dispatch(addPostActionCreator())
+    const onAddPost = () => {
+        props.addPost()
     };
 
     return (
@@ -32,7 +28,7 @@ const MyPosts = (props) => {
                       placeholder={'Текст поста'}
                       onChange={onPostChange} value={props.newPostTxt}/>
 
-                <button className={cssCls.post_post_btn} onClick={addPost}>Отправить</button>
+                <button className={cssCls.post_post_btn} onClick={onAddPost}>Отправить</button>
             </div>
             <div className={cssCls.posts}>
                 {posts_elements}
@@ -40,6 +36,7 @@ const MyPosts = (props) => {
         </div>
     )
 };
+
 
 export default MyPosts;
 

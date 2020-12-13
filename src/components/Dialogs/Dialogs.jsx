@@ -1,58 +1,16 @@
 import React from 'react';
 import cssCls from './Dialogs.module.css';
-import Msg_item from "./Msg_item/Msg_item";
-import Dialog_user_item from "./Dialog_user_item/Dialog_user_item";
-import {updateMsgActionCreator, addMsgActionCreator} from "../../redux/messagesPageReducer";
+import Dialog_messages_cont from "./Dialog_messages/Dialog_messages_cont";
+import Dialog_users_cont from "./Dialog_users/Dialog_users_cont";
 
 
 const Dialogs = (props) => {
-
-    const user_dialogs_elems = props.dialogs_page_state.user_dialog_data_arr
-        .map(dialog => <Dialog_user_item
-        userAvtrPath={dialog.user_avtr_path}
-        userName={dialog.user_name}
-        userId={dialog.user_id}
-        userShortTxt={dialog.user_short_txt}
-    />);
-
-    const user_messages_elems = props.dialogs_page_state.user_msg_data_arr
-        .map(message => <Msg_item
-            avtr_path={message.msg_avtr}
-            message_text={message.msg_text}
-            acc_owner={message.acc_owner}
-        />);
-
-
-    const new_msg_elem = React.createRef();
-
-    const msgWriteTxt = () => {
-        let newMsgTxt = new_msg_elem.current.value;
-        props.dispatch(updateMsgActionCreator(newMsgTxt));
-    };
-
-    const addMsg = () => {
-        props.dispatch(addMsgActionCreator())
-    };
-
-
-    return(
+    return (
         <div className={cssCls.dialogs_wrapper}>
-            <div className={cssCls.dialog_users}>
-                {user_dialogs_elems}
-            </div>
-
-            <div className={cssCls.dialog_messages_wrapper}>
-                <div className={cssCls.dialog_messages}>
-                    {user_messages_elems}
-                </div>
-                <div className={cssCls.new_messages_block}>
-                    <textarea onChange={msgWriteTxt} ref={new_msg_elem} placeholder={'Текст сообщения'} value={props.dialogs_page_state.newMsgText} name="" id="" cols="auto" rows="1" />
-                    <button onClick={addMsg}>Отправить</button>
-                </div>
-            </div>
+            <Dialog_users_cont store={props.store}/>
+            <Dialog_messages_cont store={props.store}/>
         </div>
-    )
+    );
 };
-
 
 export default Dialogs;

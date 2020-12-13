@@ -10,16 +10,17 @@ import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
 
 const App = (props) => {
+
   return (
           <div className='app_wrapper'>
               <Header/>
               <Navbar/>
               <div className='app_content_wrapper'>
                   <Route path='/profile'>
-                      <Profile profile_page_state={props.state.profilePage} dispatch={props.dispatch}/>
+                      <Profile store={props.store}/>
                   </Route>
                   <Route path='/dialogs'>
-                      <Dialogs dialogs_page_state={props.state.messagesPage} dispatch={props.dispatch}/>
+                      <Dialogs store={props.store}/>
                   </Route>
                   <Route path='/news'>
                       <News/>
