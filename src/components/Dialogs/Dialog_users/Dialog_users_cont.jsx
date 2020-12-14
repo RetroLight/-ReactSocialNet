@@ -1,10 +1,15 @@
 import React from "react";
 import Dialog_users from "./Dialog_users.jsx";
+import StoreContext from "../../../StoreContext";
 
-const Dialog_users_cont = (props) => {
+const Dialog_users_cont = () => {
 
     return (
-        <Dialog_users state={props.store.getState().messagesPage}/>
+        <StoreContext.Consumer>
+            {
+                (store) => <Dialog_users state={store.getState().messagesPage}/>
+            }
+        </StoreContext.Consumer>
     )
 };
 

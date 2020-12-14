@@ -1,7 +1,7 @@
 import React from "react";
 import cssCls from "./Profile_info.module.css"
 
-const Profile_info = (props) => {
+const Profile_info = () => {
     return (
         <div className={cssCls.Profile_info}>
             <div className={cssCls.main_img_wrapper}>

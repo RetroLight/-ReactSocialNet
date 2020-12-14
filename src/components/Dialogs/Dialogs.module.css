@@ -80,7 +80,7 @@
     background: #ECF6FB;
     border-radius: 10px;
     position: relative;
-    max-width: 45%;
+    max-width: 60%;
     margin-left: 8px;
 }
 .dialog_messages .msg_item .msg_text_wrapper:before {

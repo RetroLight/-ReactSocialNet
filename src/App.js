@@ -9,7 +9,7 @@ import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
 
-const App = (props) => {
+const App = () => {
 
   return (
           <div className='app_wrapper'>
@@ -17,10 +17,10 @@ const App = (props) => {
               <Navbar/>
               <div className='app_content_wrapper'>
                   <Route path='/profile'>
-                      <Profile store={props.store}/>
+                      <Profile/>
                   </Route>
                   <Route path='/dialogs'>
-                      <Dialogs store={props.store}/>
+                      <Dialogs/>
                   </Route>
                   <Route path='/news'>
                       <News/>
