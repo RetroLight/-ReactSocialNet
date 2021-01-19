@@ -25,12 +25,18 @@ const initState = {
 };
 
 const profilePageReducer = (state = initState, action) => {
+
     switch (action.type) {
+
         case updatePostTxtType:
-            state.newPostTxt = action.newTxt;
-            return state;
+
+            return {
+                ...state,
+                newPostTxt: action.newTxt
+            };
 
         case addPostType:
+
             if (state.newPostTxt) {
                 const new_post_elem = {
                     post_id: Math.floor(Math.random() * 10000000),
@@ -38,13 +44,15 @@ const profilePageReducer = (state = initState, action) => {
                     post_msg: state.newPostTxt,
                     post_like_counter: 0
                 };
-                state.posts_data_arr.unshift(new_post_elem);
-                state.newPostTxt = '';
-                return state;
+                return {
+                    ...state,
+                    posts_data_arr: [new_post_elem, ...state.posts_data_arr],
+                    newPostTxt: ''
+                };
             } else {
-                alert('Вы не ввели сообщение')
+                alert('Вы не ввели сообщение');
+                return state;
             }
-            return state;
 
         default:
             return state;

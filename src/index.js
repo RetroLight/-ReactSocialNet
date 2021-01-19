@@ -4,7 +4,7 @@ import {BrowserRouter} from "react-router-dom";
 import * as serviceWorker from './serviceWorker';
 import App from "./App";
 import store from "./redux/store";
-import {Provider} from "./StoreContext";
+import {Provider} from "react-redux";
 
 
 let rerenderReactTree = () => {
@@ -20,7 +20,6 @@ let rerenderReactTree = () => {
 store.subscribe(rerenderReactTree);
 
 rerenderReactTree();
-
 
 
 

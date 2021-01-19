@@ -7,8 +7,8 @@ const Dialog_messages = (props) => {
     const new_msg_elem = React.createRef();
 
     const onMsgChange = () => {
-        let newTxt = new_msg_elem.current.value;
-        props.msgWriteTxt(newTxt);
+        let newMsgTxt = new_msg_elem.current.value;
+        props.msgWriteTxt(newMsgTxt);
     };
 
     const onMsgAdd = () => {
