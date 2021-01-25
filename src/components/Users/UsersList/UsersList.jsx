@@ -63,6 +63,20 @@ const UsersList = (props) => {
                         </div>
                     </div>)
             }
+            <div className={cssCls.users_pages_row}>
+                {
+                    users_pagination_arr.map(page => {
+                        return (
+                            props.current_page === page ?
+                                <span onClick={(e) => props.onPageClick(page)}
+                                      className={cssCls.active_users_page_item}>{page}</span> :
+                                <span onClick={(e) => props.onPageClick(page)}
+                                      className={cssCls.users_page_item}>{page}</span>
+
+                        );
+                    })
+                }
+            </div>
         </div>
     )
 };

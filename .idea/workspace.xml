@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="90c472af-a4d9-4d96-9e88-2a230e8cea28" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Users/UsersList/UsersList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/UsersList/UsersList.jsx" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1YGJuvJvWkay3myseyjim7o9Qhk" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Users/UsersList" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/Users/UsersList" />
+      <recent name="$PROJECT_DIR$/src/components/Users/Users_list" />
+      <recent name="$PROJECT_DIR$/src/redux" />
+      <recent name="$PROJECT_DIR$/src/components/Dialogs/Dialog_users" />
+      <recent name="$PROJECT_DIR$/src/components/Dialogs/Dialog_messages" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets/img" />
+      <recent name="$PROJECT_DIR$/src/components/Dialogs/Dialog_messages" />
+      <recent name="$PROJECT_DIR$/src/components/Dialogs/Dialog_users" />
+      <recent name="$PROJECT_DIR$/src/components/Profile" />
+      <recent name="$PROJECT_DIR$/src/components/Navbar" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="90c472af-a4d9-4d96-9e88-2a230e8cea28" name="Default Changelist" comment="" />
+      <created>1582563223687</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1582563223687</updated>
+      <workItem from="1582563226077" duration="246000" />
+      <workItem from="1582563477601" duration="1361000" />
+      <workItem from="1582657507580" duration="1607000" />
+      <workItem from="1582990060680" duration="2176000" />
+      <workItem from="1583067700719" duration="2073000" />
+      <workItem from="1583074125007" duration="1541000" />
+      <workItem from="1585229885668" duration="402000" />
+      <workItem from="1587724297682" duration="7000" />
+      <workItem from="1595521157238" duration="128000" />
+      <workItem from="1595523181880" duration="1455000" />
+      <workItem from="1595580647658" duration="884000" />
+      <workItem from="1595784627933" duration="3774000" />
+      <workItem from="1597414369141" duration="2801000" />
+      <workItem from="1597423945738" duration="1416000" />
+      <workItem from="1597428577915" duration="600000" />
+      <workItem from="1597599309142" duration="1152000" />
+      <workItem from="1597601534746" duration="4285000" />
+      <workItem from="1597874462986" duration="1317000" />
+      <workItem from="1597925396868" duration="3868000" />
+      <workItem from="1598009552665" duration="11589000" />
+      <workItem from="1598374996388" duration="9228000" />
+      <workItem from="1598537045039" duration="94000" />
+      <workItem from="1598731042120" duration="1085000" />
+      <workItem from="1598811068146" duration="5573000" />
+      <workItem from="1599684901058" duration="833000" />
+      <workItem from="1601546437704" duration="8274000" />
+      <workItem from="1601721844863" duration="2723000" />
+      <workItem from="1601738897589" duration="4605000" />
+      <workItem from="1601748054305" duration="210000" />
+      <workItem from="1601748588832" duration="568000" />
+      <workItem from="1601749468272" duration="7783000" />
+      <workItem from="1601815136033" duration="6069000" />
+      <workItem from="1601892008825" duration="1000" />
+      <workItem from="1602157816342" duration="539000" />
+      <workItem from="1602970496479" duration="1246000" />
+      <workItem from="1603035641339" duration="8588000" />
+      <workItem from="1603226861171" duration="864000" />
+      <workItem from="1603275515511" duration="3000" />
+      <workItem from="1603653195989" duration="4029000" />
+      <workItem from="1603821028030" duration="10292000" />
+      <workItem from="1603912999493" duration="1138000" />
+      <workItem from="1604000155168" duration="6168000" />
+      <workItem from="1604225147688" duration="614000" />
+      <workItem from="1604259260800" duration="2978000" />
+      <workItem from="1604312409939" duration="3571000" />
+      <workItem from="1604345735501" duration="711000" />
+      <workItem from="1606049224434" duration="5006000" />
+      <workItem from="1606659250685" duration="8090000" />
+      <workItem from="1606748253352" duration="424000" />
+      <workItem from="1606757002477" duration="1280000" />
+      <workItem from="1607277102673" duration="1500000" />
+      <workItem from="1607283668995" duration="2000" />
+      <workItem from="1607348893426" duration="8242000" />
+      <workItem from="1607798801984" duration="2528000" />
+      <workItem from="1607871990878" duration="12167000" />
+      <workItem from="1607962776732" duration="5574000" />
+      <workItem from="1608029557088" duration="443000" />
+      <workItem from="1608122892284" duration="6199000" />
+      <workItem from="1608641033190" duration="5868000" />
+      <workItem from="1608806816964" duration="16619000" />
+      <workItem from="1608997610842" duration="851000" />
+      <workItem from="1609004196862" duration="1000" />
+      <workItem from="1610023934155" duration="4743000" />
+      <workItem from="1610206871442" duration="7774000" />
+      <workItem from="1610988841563" duration="14883000" />
+      <workItem from="1611329985083" duration="7440000" />
+      <workItem from="1611499979020" duration="639000" />
+      <workItem from="1611586851876" duration="3277000" />
+      <workItem from="1611592913954" duration="31000" />
+    </task>
+    <task id="LOCAL-00001" summary="Адаптация верстки под XUI JS&#10;&#10;1. Добавлена и адаптирована верстка списка вагонов.&#10;2. Доделан JS класс для прогрессбара&#10;3. Написана JS функция для аккордеона">
+      <created>1585230457131</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1585230457131</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Адаптация верстки под XUI JS&#10;&#10;1. Добавлена и адаптирована верстка списка вагонов.&#10;2. Доделан JS класс для прогрессбара&#10;3. Написана JS функция для аккордеона" />
+    <option name="LAST_COMMIT_MESSAGE" value="Адаптация верстки под XUI JS&#10;&#10;1. Добавлена и адаптирована верстка списка вагонов.&#10;2. Доделан JS класс для прогрессбара&#10;3. Написана JS функция для аккордеона" />
+  </component>
+</project>
