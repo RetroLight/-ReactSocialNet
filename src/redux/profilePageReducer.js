@@ -1,5 +1,7 @@
 const updatePostTxtType = 'UPDATE-POST-TXT';
 const addPostType = 'BLL-ADD-POST';
+const SET_PROFILE_USER = 'SET_PROFILE_USER';
+
 const initState = {
     posts_data_arr: [
         {
@@ -21,7 +23,8 @@ const initState = {
             post_like_counter: 55
         }
     ],
-    newPostTxt: ''
+    newPostTxt: '',
+    userProfile: null
 };
 
 const profilePageReducer = (state = initState, action) => {
@@ -54,6 +57,12 @@ const profilePageReducer = (state = initState, action) => {
                 return state;
             }
 
+        case SET_PROFILE_USER:
+            return {
+                ...state,
+                userProfile: action.userProfile
+            };
+
         default:
             return state;
     }
@@ -64,8 +73,16 @@ export const updatePostActionCreator = (text) => ({
     type: updatePostTxtType,
     newTxt: text
 });
+
 export const addPostActionCreator = () => ({
     type: addPostType
 });
+
+export const setUserProfileActionCreator = (userProfile) => (
+    {
+        type: SET_PROFILE_USER,
+        userProfile
+    }
+);
 
 export default profilePageReducer;

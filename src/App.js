@@ -1,24 +1,24 @@
 import React from 'react';
 import './App.css';
 import {Route} from "react-router-dom";
-import Header from "./components/Header/Header";
 import Navbar from "./components/Navbar/Navbar";
-import Profile from "./components/Profile/Profile";
+import ProfileCont from "./components/Profile/ProfileCont";
 import Dialogs from "./components/Dialogs/Dialogs";
 import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
-import Users from "./components/Users/Users";
+import Users from "./components/Users/UsersListCont";
+import HeaderContainer from "./components/Header/HeaderContainer";
 
 const App = () => {
 
   return (
           <div className='app_wrapper'>
-              <Header/>
+              <HeaderContainer/>
               <Navbar/>
               <div className='app_content_wrapper'>
-                  <Route path='/profile'>
-                      <Profile/>
+                  <Route path='/profile/:userId?'>
+                      <ProfileCont/>
                   </Route>
                   <Route path='/dialogs'>
                       <Dialogs/>

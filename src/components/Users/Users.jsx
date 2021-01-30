@@ -1,12 +1,12 @@
 import React from 'react';
-import UsersListCont from "./UsersList/UsersListCont";
-import cssCls from './Users.module.css';
+import UsersList from "./UsersList/UsersList";
+import cssCls from "./Users.module.css";
 
-const Users = () => {
 
+const Users = (props) => {
     return (
         <div className={cssCls.usersContentWrapper}>
-            <UsersListCont />
+            <UsersList {...props} onPageClick={props.onPageClick}/>
         </div>
     )
 };

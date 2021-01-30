@@ -1,15 +1,15 @@
 import React from 'react';
-import {connect} from "react-redux";
-import UsersList from "./UsersList";
-import {
-    followUser,
-    unfollow,
-    fillUsers,
-    setTotalUsers,
-    setCurrentPage,
-    toggleIsFetching
-} from "../../../redux/usersPageReducer";
+import Users from "./Users";
 import * as axios from "axios";
+import {connect} from "react-redux";
+import {
+    fillUsers,
+    followUser,
+    setCurrentPage,
+    setTotalUsers,
+    toggleIsFetching,
+    unfollow
+} from "../../redux/usersPageReducer";
 
 class UsersListCont extends React.Component {
 
@@ -22,7 +22,6 @@ class UsersListCont extends React.Component {
                 this.props.fillUsers(response.data.items);
                 this.props.setTotalUsers(response.data.totalCount);
                 this.props.toggleIsFetching(false);
-                console.log(response.data.items)
             });
 
     }
@@ -41,14 +40,7 @@ class UsersListCont extends React.Component {
 
     render() {
         return (
-            <UsersList total_users_count={this.props.total_users_count}
-                       items_count={this.props.items_count}
-                       current_page={this.props.current_page}
-                       onPageClick={this.onPageClick}
-                       usersList={this.props.usersList}
-                       unfollowBtn={this.props.unfollow}
-                       isFetching={this.props.isFetching}
-                       followBtn={this.props.followUser}/>
+            <Users {...this.props} onPageClick={this.onPageClick}/>
 
         )
     }
@@ -64,5 +56,6 @@ const mapStateToProps = (state) => {
         isFetching: state.usersPage.isFetching
     }
 };
+
 
 export default connect(mapStateToProps, {followUser, unfollow, fillUsers, setTotalUsers, setCurrentPage, toggleIsFetching})(UsersListCont);

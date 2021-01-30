@@ -13,16 +13,15 @@ const MyPosts = (props) => {
 
     const onPostChange = () => {
         let text = text_area_elem.current.value;
-        props.onPostChange(text);
+        props.updatePostActionCreator(text);
     };
 
     const onAddPost = () => {
-        props.addPost()
+        props.addPostActionCreator()
     };
 
     return (
         <div>
-            My posts
             <div className={cssCls.new_post_block}>
             <textarea ref={text_area_elem} className={cssCls.post_textarea} cols="30" rows="10"
                       placeholder={'Текст поста'}

@@ -30,15 +30,15 @@
     display: flex;
     border-radius: 5px;
     padding: 8px;
-    cursor: pointer;
 }
-.users > * + * {
+.users .userItem {
     margin-top: 20px;
 }
 
 .photoBlock {
     width: 100px;
     height: 100px;
+    cursor: pointer;
 }
 .photoBlock img {
     display: block;

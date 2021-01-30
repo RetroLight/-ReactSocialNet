@@ -2,6 +2,7 @@ import React from 'react';
 import cssCls from './UsersList.module.css';
 import noPhoto from '../../../assets/img/noPhoto.jpeg'
 import Preloader1 from "../../Common/preloader/Preloader1";
+import {NavLink} from "react-router-dom";
 
 
 const UsersList = (props) => {
@@ -12,6 +13,7 @@ const UsersList = (props) => {
     for (let i = 1; i <= total_user_pages; i++) {
         users_pagination_arr.push(i);
     }
+
 
     return (
         <div className={cssCls.users}>
@@ -34,9 +36,11 @@ const UsersList = (props) => {
             {
                 props.usersList.map(user =>
                     <div className={cssCls.userItem}>
-                        <div className={cssCls.photoBlock}>
-                            <img src={user.photos.small ? user.photos.small : noPhoto} alt=""/>
-                        </div>
+                        <NavLink to={`/profile/${user.id}`}>
+                            <div className={cssCls.photoBlock}>
+                                <img src={user.photos.small ? user.photos.small : noPhoto} alt=""/>
+                            </div>
+                        </NavLink>
                         <div className={cssCls.infoBlock}>
                             <div className={cssCls.userNameWrapper}>
                                 <span className={cssCls.name}>{user.name}</span>&nbsp;
@@ -54,29 +58,15 @@ const UsersList = (props) => {
                             {
                                 user.followed
                                     ? <button onClick={() => {
-                                        props.unfollowBtn(user.id)
+                                        props.unfollow(user.id)
                                     }} className={cssCls.activeFollowBtn}>Отписаться</button>
                                     : <button onClick={() => {
-                                        props.followBtn(user.id)
+                                        props.followUser(user.id)
                                     }} className={cssCls.followBtn}>Подписаться</button>
                             }
                         </div>
                     </div>)
             }
-            <div className={cssCls.users_pages_row}>
-                {
-                    users_pagination_arr.map(page => {
-                        return (
-                            props.current_page === page ?
-                                <span onClick={(e) => props.onPageClick(page)}
-                                      className={cssCls.active_users_page_item}>{page}</span> :
-                                <span onClick={(e) => props.onPageClick(page)}
-                                      className={cssCls.users_page_item}>{page}</span>
-
-                        );
-                    })
-                }
-            </div>
         </div>
     )
 };
