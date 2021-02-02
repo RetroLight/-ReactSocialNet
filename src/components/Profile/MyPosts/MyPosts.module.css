@@ -1,6 +1,4 @@
 .new_post_block {
-    width: 95%;
-    margin: 0 auto;
     display: flex;
     height: 70px;
     margin-top: 20px;
@@ -13,4 +11,5 @@
 .new_post_block button.post_post_btn {
     cursor: pointer;
     height: 100%;
+    margin-left: 10px;
 }

@@ -3,6 +3,7 @@ import cssCls from './UsersList.module.css';
 import noPhoto from '../../../assets/img/noPhoto.jpeg'
 import Preloader1 from "../../Common/preloader/Preloader1";
 import {NavLink} from "react-router-dom";
+import * as axios from "axios";
 
 
 const UsersList = (props) => {
@@ -58,10 +59,30 @@ const UsersList = (props) => {
                             {
                                 user.followed
                                     ? <button onClick={() => {
-                                        props.unfollow(user.id)
+                                        axios.delete(`https://social-network.samuraijs.com/api/1.0/follow/${user.id}`, {
+                                            withCredentials: true,
+                                            headers: {
+                                                'API-KEY': '2b75dd8e-99c2-4468-b383-732d8b1c3006'
+                                            }
+                                        }).then(response => {
+                                            if (response.data.resultCode === 0) {
+                                                console.log(response)
+                                                props.unfollow(user.id)
+                                            }
+                                        });
                                     }} className={cssCls.activeFollowBtn}>Отписаться</button>
                                     : <button onClick={() => {
-                                        props.followUser(user.id)
+                                        axios.post(`https://social-network.samuraijs.com/api/1.0/follow/${user.id}`, {}, {
+                                            withCredentials: true,
+                                            headers: {
+                                                'API-KEY': '2b75dd8e-99c2-4468-b383-732d8b1c3006'
+                                            }
+                                        }).then(response => {
+                                            if (response.data.resultCode === 0) {
+                                                props.followUser(user.id)
+                                            }
+                                        });
+
                                     }} className={cssCls.followBtn}>Подписаться</button>
                             }
                         </div>
@@ -72,6 +93,3 @@ const UsersList = (props) => {
 };
 
 export default UsersList;
-
-
-

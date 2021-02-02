@@ -17,7 +17,8 @@ class UsersListCont extends React.Component {
         this.props.fillUsers([]);
         this.props.toggleIsFetching(true);
 
-        axios.get(`https://social-network.samuraijs.com/api/1.0/users?count=${this.props.items_count}&page=${this.props.current_page}`)
+        axios.get(`https://social-network.samuraijs.com/api/1.0/users?count=${this.props.items_count}&page=${this.props.current_page}`,
+            {withCredentials: true})
             .then(response => {
                 this.props.fillUsers(response.data.items);
                 this.props.setTotalUsers(response.data.totalCount);
@@ -31,7 +32,9 @@ class UsersListCont extends React.Component {
         this.props.toggleIsFetching(true);
         this.props.setCurrentPage(page);
 
-        axios.get(`https://social-network.samuraijs.com/api/1.0/users?count=${this.props.items_count}&page=${page}`)
+        axios.get(`https://social-network.samuraijs.com/api/1.0/users?count=${this.props.items_count}&page=${page}`, {
+            withCredentials: true
+        })
             .then(response => {
                 this.props.fillUsers(response.data.items);
                 this.props.toggleIsFetching(false);

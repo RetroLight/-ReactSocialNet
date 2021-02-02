@@ -1,6 +1,6 @@
 .header {
     grid-area: header;
-    background-color: green;
+    background-color: #ff0909;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -21,7 +21,11 @@
     font-size: 16px;
 }
 .login_block .login_photo {
-
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    border-radius: 50px;
+    overflow: hidden;
 }
 .login_block .login_photo img {
     display: block;
